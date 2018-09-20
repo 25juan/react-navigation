@@ -22,13 +22,13 @@
 
 var validateFormat = function(format) {};
 
-if (__DEV__) {
-  validateFormat = function(format) {
-    if (format === undefined) {
-      throw new Error('invariant requires an error message argument');
-    }
-  };
-}
+// if (__DEV__) { 屏蔽防止web报错
+//   validateFormat = function(format) {
+//     if (format === undefined) {
+//       throw new Error('invariant requires an error message argument');
+//     }
+//   };
+// }
 
 function invariant(condition, format, a, b, c, d, e, f) {
   validateFormat(format);
